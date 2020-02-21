@@ -12,14 +12,9 @@ public class GameManager : MonoBehaviour
     {
     	_deck = new PokerDeck();
     	_deck.Shuffle();
-    	for (int i = 0; i < 51; i++)
-    	{
-    		DrawTopCard();
-    		Invoke("DrawTopCard", 1);
-    	}
     }
 
-    void DrawTopCard()
+    public void DrawTopCard()
     {
     	if (CardPrefab != null)
     	{
