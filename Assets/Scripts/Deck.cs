@@ -17,6 +17,7 @@ public class Deck
     {
     	Card topCard = Cards.Last();
     	Cards.RemoveLast();
+    	Debug.Log(topCard.Name);
     	return topCard;
     }
     
@@ -24,6 +25,7 @@ public class Deck
     {
     	Card bottomCard = Cards.First();
     	Cards.RemoveFirst();
+    	Debug.Log(bottomCard.Name);
     	return bottomCard;
     }
 
@@ -53,6 +55,11 @@ public class Deck
     	}
 
     	Cards = new LinkedList<Card>(tempDeck);
+
+    	foreach (var card in Cards)
+    	{
+    		Debug.Log(card.Name);
+    	}
     }
 
     public void Merge(Deck other)

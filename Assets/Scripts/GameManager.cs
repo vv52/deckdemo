@@ -30,4 +30,21 @@ public class GameManager : MonoBehaviour
     		}
     	}
     }
+
+    public void DrawBottomCard()
+    {
+    	if (CardPrefab != null)
+    	{
+    		var card = GameObject.Instantiate<GameObject>(CardPrefab, Vector3.zero, Quaternion.identity);
+    		var controller = card.GetComponent<CardManager>();
+
+    		controller.Card = _deck.DrawFromBottom();
+
+    		if (controller != null)
+    		{
+    			controller.FaceMaterial = PokerCardFactory.GetInstance().Materials[controller.Card.Name];
+    			controller.UpdateFaceMaterial();
+    		}
+    	}
+    }
 }

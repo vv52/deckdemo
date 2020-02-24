@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrawCard : MonoBehaviour
+public class DrawCard2 : MonoBehaviour
 {
 	public GameManager gameManager;
 
     public void OnClick()
     {
-    	gameManager.DrawTopCard();
+    	gameManager.DrawBottomCard();
     }
 }
