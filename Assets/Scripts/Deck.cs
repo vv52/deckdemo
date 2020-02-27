@@ -64,6 +64,17 @@ public class Deck
 
     public void Merge(Deck other)
     {
-    	
+    	foreach(var card in other.Cards)
+        {
+            Cards.AddLast(card);
+        }
+
+        Debug.Log("Card Count: " + Cards.Count());
+    }
+
+    public void AddDeck()
+    {
+        Deck newDeck = new PokerDeck();
+        Merge(newDeck);        
     }
 }

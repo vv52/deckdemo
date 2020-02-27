@@ -52,4 +52,9 @@ public class GameManager : MonoBehaviour
     {
     	_deck.Shuffle();
     }
+
+    public void AddDeck()
+    {
+        _deck.AddDeck();
+    }
 }
