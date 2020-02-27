@@ -29,4 +29,11 @@ public class CardManager : MonoBehaviour
             mesh.material = FaceMaterial;
         }
     }
+    /*
+    public void MoveToFront(int queueNo)
+    {
+        MeshRenderer mesh = gameObject.FindComponentInChildWithTag<MeshRenderer>(CARD_FACE_TAG);
+        mesh.material.renderQueue = queueNo;
+    }
+    */
 }
