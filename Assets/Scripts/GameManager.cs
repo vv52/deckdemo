@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject CardPrefab;
 
+    private CardManager last;
+
     private PokerDeck _deck;
 
     void Start()
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
     			controller.FaceMaterial = PokerCardFactory.GetInstance().Materials[controller.Card.Name];
     			controller.UpdateFaceMaterial();
     		}
+
+            last = controller;
     	}
     }
 
@@ -45,6 +49,8 @@ public class GameManager : MonoBehaviour
     			controller.FaceMaterial = PokerCardFactory.GetInstance().Materials[controller.Card.Name];
     			controller.UpdateFaceMaterial();
     		}
+
+            last = controller;
     	}
     }
 
@@ -56,5 +62,10 @@ public class GameManager : MonoBehaviour
     public void AddDeck()
     {
         _deck.AddDeck();
+    }
+
+    public void FlipCard()
+    {
+        last.FlipCard();
     }
 }

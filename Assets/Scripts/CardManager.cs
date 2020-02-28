@@ -29,6 +29,11 @@ public class CardManager : MonoBehaviour
             mesh.material = FaceMaterial;
         }
     }
+
+    public void FlipCard()
+    {
+        Card.Flip();
+    }
     /*
     public void MoveToFront(int queueNo)
     {
